@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Valenciennes Métropole - Rehdeval",
+    "content": "Solution de création et traitement de demandes par formulaire, frontend réalisé avec React, backend réalisé avec NodeJs. Fonctionnalités d’ajout de formulaire, clotures, changement d’état, retour en arrière, validation, création de compte"
+  },
+  {
+    "name": "Auto-entreprise - Spring",
+    "content": "Application de magie (mentalisme) pour Android et iOS, utilisant plusieurs fonctionnalités de l’appareil comme l’appareil photo, le gyroscope, l’acceleromètre, les services, la détection précise des mouvement de l’appareil et leur direction."
+  }
+]
