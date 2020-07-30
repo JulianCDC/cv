@@ -4,6 +4,7 @@ import ProgressBar from "../components/ProgressBar/ProgessBar";
 import contact from "../data/contact";
 import experiences from "../data/experiences.json";
 import projects from "../data/projects.json";
+import skills from "../data/skills.json";
 import studies from "../data/studies.json";
 import technos from "../data/technos";
 import "../styles/index.scss";
@@ -16,7 +17,11 @@ type Lang = {
 const langs: Lang[] = [
   {
     label: "Anglais",
-    level: "Courant"
+    level: "courant"
+  },
+  {
+    label: "Espagnol",
+    level: "scolaire"
   }
 ];
 
@@ -36,10 +41,10 @@ function Index() {
       </div>
       <hr className="ml-6" />
       <div className="flex flex-row flex-grow pl-6">
-        <div className="w-2/5 px-3">
+        <div className="w-2/6 px-3">
           <div className="sidebar-section">
             <h3 className="sidebar-heading">Technologies</h3>
-            <div className="grid grid-cols-4 gap-5 sidebar-content">
+            <div className="grid grid-cols-4 gap-4 sidebar-content">
               {technos
                 .sort((a, b) => b.level - a.level)
                 .map(techno => (
@@ -63,30 +68,35 @@ function Index() {
                 ))}
             </div>
           </div>
-          <div className="sidebar-section">
+          <div className="-mt-3 sidebar-section">
             <h3 className="sidebar-heading">Coordonnées</h3>
             <div className="flex flex-col sidebar-content">
-              {contact.map(contact => (
+              {contact.map((contactElement, index) => (
                 <div
-                  className="flex flex-row items-center w-full h-auto mb-3"
-                  key={contact.content}
+                  className={`flex flex-row items-center w-full h-auto ${
+                    index < contact.length - 1 ? "mb-3" : null
+                  }`}
+                  key={contactElement.content}
                 >
-                  <img className="h-10" src={contact.icon} />
-                  <p className="flex-grow ml-4 text-lg">{contact.content}</p>
+                  <img className="h-10" src={contactElement.icon} />
+                  <p className="flex-grow ml-2 text-lg">
+                    {contactElement.content}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
-          <div className="-mt-3 sidebar-section">
+          <div className="sidebar-section">
             <h3 className="sidebar-heading">Langues</h3>
             <div className="flex flex-col sidebar-content">
               {langs.map(lang => (
                 <div
-                  className="flex items-center justify-around w-full h-auto mb-3 text-xl leading-relaxed"
+                  className="flex justify-start w-full h-auto mb-3 text-xl leading-relaxed"
                   key={lang.label}
                 >
-                  <div>{lang.label}</div>
-                  <div>{lang.level}</div>
+                  <div>
+                    {lang.label} — {lang.level}
+                  </div>
                 </div>
               ))}
             </div>
@@ -96,7 +106,7 @@ function Index() {
             <div className="flex flex-col sidebar-content">
               {interests.map(interest => (
                 <p
-                  className="w-full h-auto mb-3 text-xl leading-relaxed text-center"
+                  className="w-full h-auto mb-3 text-xl leading-relaxed text-left"
                   key={interest}
                 >
                   {interest}
@@ -105,22 +115,22 @@ function Index() {
             </div>
           </div>
         </div>
-        <div className="w-3/5 ml-8">
+        <div className="w-4/6 ml-8">
           <div className="main-section">
             <h3 className="main-heading">Expériences</h3>
             <div className="flex flex-col main-content">
               {experiences.map(experience => (
                 <div
-                  className="flex flex-col items-start w-full h-auto mb-8"
+                  className="flex flex-col items-start w-full h-auto mb-4"
                   key={experience.name}
                 >
-                  <p className="text-lg font-medium">
+                  <p className="text-xl font-medium">
                     {experience.desc}&nbsp;
                     <span className="text-sm font-normal">
                       ({experience.startDate} - {experience.endDate})
                     </span>
                   </p>
-                  <p className="mt-2 text-base">{experience.name}</p>
+                  <p className="mt-2 text-lg">{experience.name}</p>
                 </div>
               ))}
             </div>
@@ -130,16 +140,16 @@ function Index() {
             <div className="flex flex-col main-content">
               {studies.map(study => (
                 <div
-                  className="flex flex-col items-start w-full h-auto mb-8"
+                  className="flex flex-col items-start w-full h-auto mb-4"
                   key={study.school}
                 >
-                  <p className="text-lg font-medium">
+                  <p className="text-xl font-medium">
                     {study.cursus}&nbsp;
                     <span className="text-sm font-normal">
                       ({study.startDate} - {study.endDate})
                     </span>
                   </p>
-                  <p className="mt-2 text-base">{study.school}</p>
+                  <p className="mt-2 text-lg">{study.school}</p>
                 </div>
               ))}
             </div>
@@ -149,14 +159,24 @@ function Index() {
             <div className="flex flex-col main-content">
               {projects.map(project => (
                 <div
-                  className="flex flex-col items-start w-full h-auto mb-8"
+                  className="flex flex-col items-start w-full h-auto mb-4"
                   key={project.name}
                 >
-                  <p className="text-lg font-medium">{project.name}</p>
-                  <p className="mt-2 text-base leading-relaxed">
+                  <p className="text-xl font-medium">{project.name}</p>
+                  <p className="mt-2 text-lg leading-relaxed">
                     {project.content}
                   </p>
                 </div>
+              ))}
+            </div>
+          </div>
+          <div className="main-section">
+            <h3 className="main-heading">Compétences</h3>
+            <div className="grid grid-cols-3 gap-5 main-content">
+              {skills.map(skill => (
+                <p className="text-lg" key={skill.name}>
+                  {skill.name}
+                </p>
               ))}
             </div>
           </div>

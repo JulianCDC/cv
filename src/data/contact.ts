@@ -11,9 +11,9 @@ type Contact = {
 
 const contact: Contact[] = [
   { content: "julian.gardez@outlook.com", icon: email },
-  { content: "59300, Valenciennes", icon: location },
   { content: "07 69 55 90 79", icon: phone },
-  { content: "linkedin.com/in/juliangardez", icon: linkedin },
+  { content: "59300, Valenciennes", icon: location },
+  { content: "/in/juliangardez", icon: linkedin },
   { content: "github.com/JulianCDC", icon: github }
 ];
 
