@@ -27,8 +27,8 @@ function Index() {
     <div className="flex flex-col p-5 border-2 border-black border-solid w-page h-page">
       <div className="flex items-center w-full h-auto p-6">
         <div className="flex flex-col flex-grow leading-normal">
-          <h1 className="text-6xl font-bold text-main-darker">Julian Gardez</h1>
-          <h2 className="-ml-1 text-5xl font-bold text-main">
+          <h1 className="text-6xl font-bold text-black">Julian Gardez</h1>
+          <h2 className="-ml-1 text-5xl font-bold text-black">
             Développeur Fullstack JS
           </h2>
         </div>
