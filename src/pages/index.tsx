@@ -10,13 +10,13 @@ import "../styles/index.scss";
 
 type Lang = {
   label: string;
-  level: number;
+  level: string;
 };
 
 const langs: Lang[] = [
   {
     label: "Anglais",
-    level: 4
+    level: "Courant"
   }
 ];
 
@@ -82,17 +82,11 @@ function Index() {
             <div className="flex flex-col sidebar-content">
               {langs.map(lang => (
                 <div
-                  className="flex items-center justify-center w-full h-auto mb-3 text-xl leading-relaxed"
+                  className="flex items-center justify-around w-full h-auto mb-3 text-xl leading-relaxed"
                   key={lang.label}
                 >
-                  <div className="w-2/4">{lang.label}</div>
-                  <div className="w-2/4">
-                    <ProgressBar
-                      max={5}
-                      current={lang.level}
-                      color="#964CE0"
-                    ></ProgressBar>
-                  </div>
+                  <div>{lang.label}</div>
+                  <div>{lang.level}</div>
                 </div>
               ))}
             </div>
@@ -121,12 +115,12 @@ function Index() {
                   key={experience.name}
                 >
                   <p className="text-lg font-medium">
-                    {experience.name}&nbsp;
+                    {experience.desc}&nbsp;
                     <span className="text-sm font-normal">
                       ({experience.startDate} - {experience.endDate})
                     </span>
                   </p>
-                  <p className="mt-2 text-base">{experience.desc}</p>
+                  <p className="mt-2 text-base">{experience.name}</p>
                 </div>
               ))}
             </div>
