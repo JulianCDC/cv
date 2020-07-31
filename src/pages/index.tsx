@@ -3,29 +3,13 @@ import photo from "../assets/images/photo.png";
 import ProgressBar from "../components/ProgressBar/ProgessBar";
 import contact from "../data/contact";
 import experiences from "../data/experiences.json";
+import interests from "../data/interests.json";
+import langs from "../data/langs.json";
 import projects from "../data/projects.json";
 import skills from "../data/skills.json";
 import studies from "../data/studies.json";
 import technos from "../data/technos";
 import "../styles/index.scss";
-
-type Lang = {
-  label: string;
-  level: string;
-};
-
-const langs: Lang[] = [
-  {
-    label: "Anglais",
-    level: "courant"
-  },
-  {
-    label: "Espagnol",
-    level: "scolaire"
-  }
-];
-
-const interests: string[] = ["Informatique", "Technologies web"];
 
 function Index() {
   return (
