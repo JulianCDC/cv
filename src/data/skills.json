@@ -6,12 +6,15 @@
     "name": "Versioning GIT"
   },
   {
-    "name": "HTTP"
+    "name": "Design Responsive"
   },
   {
     "name": "Pattern MVC"
   },
   {
     "name": "Linux"
+  },
+  {
+    "name": "Docker"
   }
 ]

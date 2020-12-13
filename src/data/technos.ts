@@ -2,9 +2,9 @@ import angular from "../assets/images/angular.png";
 import express from "../assets/images/express.png";
 import ionic from "../assets/images/ionic.png";
 import nestjs from "../assets/images/nest.svg";
+import nextjs from "../assets/images/nextjs.png";
 import node from "../assets/images/nodejs.png";
 import react from "../assets/images/react.png";
-import rxjs from "../assets/images/rxjs.png";
 import typescript from "../assets/images/typescript.png";
 
 type Techno = {
@@ -30,7 +30,7 @@ const technos: Techno[] = [
   {
     name: "Angular",
     image: angular,
-    level: 80,
+    level: 70,
     mainColor: "#B52E31"
   },
   {
@@ -54,14 +54,14 @@ const technos: Techno[] = [
   {
     name: "Ionic",
     image: ionic,
-    level: 70,
+    level: 75,
     mainColor: "#478AFF"
   },
   {
-    name: "RxJS",
-    image: rxjs,
-    level: 75,
-    mainColor: "#D0128D"
+    name: "NextJS",
+    image: nextjs,
+    level: 90,
+    mainColor: "#393939"
   }
 ];
 
