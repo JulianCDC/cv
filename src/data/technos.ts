@@ -1,8 +1,8 @@
 import angular from "../assets/images/angular.png";
 import express from "../assets/images/express.png";
 import ionic from "../assets/images/ionic.png";
+import java from "../assets/images/java.png";
 import nestjs from "../assets/images/nest.svg";
-import nextjs from "../assets/images/nextjs.png";
 import node from "../assets/images/nodejs.png";
 import react from "../assets/images/react.png";
 import typescript from "../assets/images/typescript.png";
@@ -58,10 +58,10 @@ const technos: Techno[] = [
     mainColor: "#478AFF"
   },
   {
-    name: "NextJS",
-    image: nextjs,
-    level: 90,
-    mainColor: "#393939"
+    name: "Java",
+    image: java,
+    level: 80,
+    mainColor: "#ea2d2e"
   }
 ];
 
